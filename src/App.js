@@ -4,6 +4,8 @@ import SplashScreen from "react-native-splash-screen";
 import { Scene, Router, Stack } from "react-native-router-flux";
 
 import LoginScreen from "./screens/LoginScreen";
+import TutorialScreen from "./screens/TutorialScreen";
+import GroupListScreen from "./screens/GroupListScreen";
 
 export default class App extends Component {
   componentDidMount() {
@@ -22,13 +24,21 @@ export default class App extends Component {
             setBarStyle="light-content"
           />
 
-          {/* <Scene
-            key="timeTable"
-            component={TimeTable}
-            title="SGE TimeTable"
+          <Scene
+            key="tutorial"
+            component={TutorialScreen}
+            title="Tutorial"
             hideNavBar={true}
             //style={{backgroundColor:"#17273d"}}
-          /> */}
+          />
+
+          <Scene
+            key="groupList"
+            component={GroupListScreen}
+            title="GroupList"
+            hideNavBar={true}
+            //style={{backgroundColor:"#17273d"}}
+          />
         </Stack>
       </Router>
     );
